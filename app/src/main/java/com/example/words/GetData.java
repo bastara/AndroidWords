@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -35,21 +37,39 @@ public class GetData extends AppCompatActivity {
     void readFile() {
 
 
-        StringBuilder buf = new StringBuilder();
+//        StringBuilder buf = new StringBuilder();
         InputStream text;
         try {
             text = this.getAssets()
                        .open("test.txt");
-            BufferedReader in = new BufferedReader(new InputStreamReader(text));
-            String str;
+//            BufferedReader in = new BufferedReader(new InputStreamReader(text));
+//            String str;
+//
+//            while ((str = in.readLine()) != null) {
+//                Log.d(TAG, "" + str);
+//                buf.append(str);
+//
+//            }
+//
+//            in.close();
 
-            while ((str = in.readLine()) != null) {
-                Log.d(TAG, "" + str);
-                buf.append(str);
-
+            BufferedInputStream bis = new BufferedInputStream(text);
+            ByteArrayOutputStream buf = new ByteArrayOutputStream();
+            int result = bis.read();
+            while(result != -1) {
+                if (result == 59) {
+                    Log.d(TAG, "" + buf.toString());
+                    buf.reset();
+                    result = bis.read();
+                    continue;
+                }
+                buf.write((byte) result);
+                result = bis.read();
+//                Log.d(TAG, "" + (char)result);
             }
+            Log.d(TAG, "" + buf.toString());
+            Log.d(TAG, "" + buf);
 
-            in.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
