@@ -1,8 +1,8 @@
-basket;[ˈbɑːskɪt];корзина
+basket;[ˈbɑːskɪt];корзина;1ассоциация
 bush;[bʊʃ];куст
 claw;[klɔː];коготь
-flame;[fleɪm];пламя
-fist;[fɪst];кулак
+flame;[fleɪm];пламя;2 ассоциация
+fist;[fɪst];кулак; 3 ассоциация
 hollow;[ˈhɒləʊ];дупло
 parcel;[ˈpɑːsl];посылка
 brick;[brɪk];кирпич

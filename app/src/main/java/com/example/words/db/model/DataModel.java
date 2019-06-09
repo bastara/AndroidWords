@@ -15,6 +15,7 @@ public class DataModel {
     private String transcription;
     private String translation;
     private String association;
+    private int progress = 0;
 
     @NonNull
     public String getWord() {
@@ -47,5 +48,13 @@ public class DataModel {
 
     public void setAssociation(String association) {
         this.association = association;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public void setProgress(int progress) {
+        this.progress = progress;
     }
 }
