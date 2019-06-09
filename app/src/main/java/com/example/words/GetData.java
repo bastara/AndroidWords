@@ -141,7 +141,7 @@ public class GetData extends AppCompatActivity {
         URL url = null;
         try {
             url = new URL("http://s150vla.storage.yandex.net/rdisk/9b9bf4533cbff75be932298ad489a4c0f08715f9c90185f237ae1d5d0ee3a0aa/5cfcae85/xEsgu8FwQNyma7vDiS0DjTVbAHnnt7aCELC2iEL2kvdRe_ouXeF764UvBdnYlVoP9rHQHgJ2Qiluvg5lVXi6wQ==?uid=116280676&filename=test.txt&disposition=attachment&hash=&limit=0&content_type=text%2Fplain&fsize=3739&hid=9846fcb4122da2761964a09a0f6bcdbc&media_type=document&tknv=v2&etag=8c6750470f33c9f534047baae985eb62&rtoken=80yDM4XKCkh3&force_default=yes&ycrid=na-5d2b94cfd6cf39ede48fb9a11582bd1f-downloader15h&ts=58ade9df4eb40&s=c89a0317f378bf24eb777927acbba25a7b9deafd95c707c139796c19981ea0f8&pb=U2FsdGVkX18KOrVyQh3jgLitYhU05WjVHLBMBcEUHMxI7r3uFDhUHijCtCKkADCPRA_MlYL6tpfNOWjrDXLr1Is3Y4MKmhbLtZiV28TtEsc");
-            url = new URL("https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/eNyaKjPaVckbNw");
+//            url = new URL("https://getfile.dokpub.com/yandex/get/https://yadi.sk/d/eNyaKjPaVckbNw");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
